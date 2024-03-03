@@ -51,17 +51,7 @@
 }
 
 /* Responsive typography */
-/* @media screen and (min-width: 968px) {
-  :root {
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-} */
+
 
 /*=============== BASE ===============*/
 * {
@@ -794,7 +784,7 @@ body.dark-theme {
 }
 
 /* For large devices */
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -896,7 +886,7 @@ body.dark-theme {
   .scrollup {
     right: 3rem;
   }
-}
+} */
 
 body {
 	margin: 0;
