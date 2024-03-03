@@ -7,34 +7,106 @@
     <title>Login Page</title>
 </head>
 <body>
-    
-    <div class="container">
-        <div class="login">
-           <div class="container">
-                <h1>Log in</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password"><br>
-                <input type="checkbox"><span>Remember me</span>
-                <a href="#">Forgot password?</a>
-                <button>log in</button>
-                <hr><p>Or Connect With</p><hr>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><i class="fab fa-twitter fa-2x"></i></li>
-                    <li><i class="fab fa-github fa-2x"></i></li>
-                    <li><i class="fab fa-linkedin-in fa-2x"></i></li>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="favicon.svg" height="26" width="26" class="nav__logo-img"> 
+                Crypto TradeX
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#achetez" class="nav__link">Buy/Sell</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#cryptos" class="nav__link">Holdings</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#Référence" class="nav__link">Reference</a>
+                    </li>
                 </ul>
-                <div class="clearfix"></div>
-           </div>
-        </div>
-        <div class="register">
-            <div class="container">
-                <i class="fas fa-user-plus fa-5x"></i>
-                <h2>New User!</h2>
-                <p>Enter your personal details and start journey with us</p>
-                <button>Register <i class="fas fa-arrow-circle-right"></i></button>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+
+                <img src="assets/img/nav-light.png" alt="" class="nav__img">
             </div>
-        </div>  
-      </div>
+            <div class="nav__btns">
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    
+
+   
+    <section class="forms-section">
+        <h1 class="section-title">Singnup | Login </h1>
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+              Login
+              <span class="underline"></span>
+            </button>
+            <form class="form form-login">
+              <fieldset>
+                <legend>Please, enter your email and password for login.</legend>
+                <div class="input-block">
+                  <label for="login-email">E-mail</label>
+                  <input id="login-email" type="email" required>
+                </div>
+                <div class="input-block">
+                  <label for="login-password">Password</label>
+                  <input id="login-password" type="password" required>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-login">Login</button>
+            </form>
+          </div>
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+              Sign Up
+              <span class="underline"></span>
+            </button>
+            <form class="form form-signup">
+              <fieldset>
+                <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                <div class="input-block">
+                  <label for="signup-email">E-mail</label>
+                  <input id="signup-email" type="email" required>
+                </div>
+                <div class="input-block">
+                  <label for="signup-password">Password</label>
+                  <input id="signup-password" type="password" required>
+                </div>
+                <div class="input-block">
+                  <label for="signup-password-confirm">Confirm password</label>
+                  <input id="signup-password-confirm" type="password" required>
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-signup">Continue</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <script>
+        const switchers = [...document.querySelectorAll('.switcher')]
+
+switchers.forEach(item => {
+	item.addEventListener('click', function() {
+		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+		this.parentElement.classList.add('is-active')
+	})
+})
+
+      </script>
 </body>
 </html>
